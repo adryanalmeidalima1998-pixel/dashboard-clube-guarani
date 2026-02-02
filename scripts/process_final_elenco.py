@@ -8,27 +8,22 @@ def process_csv_content(csv_text):
     reader = csv.DictReader(f)
     players = []
     for row in reader:
-        # Extrair o número do jogador
-        numero = row.get('?', row.get('', '-'))
-        if not numero or numero == 'nan':
-            keys = list(row.keys())
-            numero = row.get(keys[0], '-') if keys else '-'
-
+        # Mapeamento baseado na nova estrutura da planilha do Guarani
         player = {
-            "Numero": numero,
+            "Numero": "-", # Não encontrado na nova planilha
             "Jogador": row.get('Jogador', ''),
-            "Nacionalidade": row.get('Nacionalidade', 'BRA'),
+            "Nacionalidade": row.get('País de nacionalidade', row.get('Naturalidade', 'BRA')),
             "Altura": row.get('Altura', '-'),
             "Idade": row.get('Idade', '-'),
-            "Posicao": row.get('Posição', row.get('Posicao', '')),
-            "Index": row.get('Index', '-'),
+            "Posicao": row.get('Posição', ''),
             "Partidas": row.get('Partidas jogadas', '0'),
-            "Gols": row.get('Gols', '0'),
-            "Acoes_Sucesso": row.get('Ações / com sucesso %', '0%'),
-            "Passes_Precisos": row.get('Passes precisos %', '0%'),
-            "Dribles": row.get('Dribles bem sucedidos', '0'),
-            "Desafios": row.get('Desafios vencidos, %', '0%'),
-            "Minutos": row.get('Minutos jogados', '0')
+            "Gols": row.get('Golos', '0'),
+            "Assistências": row.get('Assistências', '0'),
+            "Acoes_Sucesso": row.get('Acções atacantes com sucesso/90', '0'),
+            "Passes_Precisos": row.get('Passes certos, %', '0%'),
+            "Dribles": row.get('Dribles/90', '0'),
+            "Desafios": row.get('Duelos ganhos, %', '0%'),
+            "Minutos": row.get('Minutos jogados:', '0')
         }
         if player["Jogador"]:
             players.append(player)

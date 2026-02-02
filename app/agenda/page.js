@@ -83,24 +83,26 @@ export default function AgendaPage() {
             data[header.trim()] = row[i] || "";
           });
 
-          const isMandante = data['Mandante'] === 'Guarani FC';
+          const mandante = data['Time 1'] || "";
+          const visitante = data['Time 2'] || "";
+          const isMandante = mandante === 'Guarani FC' || mandante === 'Guarani';
           
           return {
             id: index,
             data: data['Data'],
             hora: data['Horário'],
-            mandante: data['Mandante'],
-            visitante: data['Visitante'],
+            mandante: mandante,
+            visitante: visitante,
             golsMandanteNum: data['Gols Mandante'] || '0',
             golsVisitanteNum: data['Gols Visitante'] || '0',
-            status: data['Resultado'] ? 'passado' : 'proximo',
+            status: (data['Gols Mandante'] !== "" && data['Gols Mandante'] !== undefined) ? 'passado' : 'proximo',
             campeonato: data['Competição'],
-            local: data['Local'] || (isMandante ? 'Jorjão' : 'Fora'),
+            local: data['Estádio'] || (isMandante ? 'Brinco de Ouro' : 'Fora'),
             escalaçaoIframe: data['código escalação'] || null,
-            golsMandante: data['Gols marcados mandante'] || "",
-            golsVisitante: data['Gols marcados VISITANTE'] || "",
-            logoMandante: getLogo(data['Mandante']),
-            logoVisitante: getLogo(data['Visitante']),
+            golsMandante: "",
+            golsVisitante: "",
+            logoMandante: getLogo(mandante),
+            logoVisitante: getLogo(visitante),
             logoCampeonato: getLogoCampeonato(data['Competição'])
           };
         });

@@ -22,11 +22,11 @@ export default function CentralDados() {
 
   // Métricas selecionadas
   const [metricasSelecionadas, setMetricasSelecionadas] = useState([
-    'Index',
-    'Minutos jogados',
-    'Gols',
+    'Partidas jogadas',
+    'Minutos jogados:',
+    'Golos',
     'Assistências',
-    'Passes precisos %'
+    'Passes certos, %'
   ])
 
   // Templates
@@ -102,11 +102,11 @@ export default function CentralDados() {
       'Geral': []
     }
 
-    const palavrasChaveAtaque = ['Gol', 'Assistência', 'Chance', 'Chute', 'Finalização', 'Xg', 'xA', 'Tiro', 'Header', 'Poste', 'Entradas no terço final']
-    const palavrasChaveDefesa = ['Desarme', 'Interceptação', 'Rebote', 'Falha', 'Erro', 'Cartão', 'Falta', 'Defesa', 'Disputa defensiva', 'Disputa na defesa']
-    const palavrasChavePasses = ['Passe', 'Cruzamento', 'Passe chave', 'Passe progressivo', 'Passe longo', 'Passe super longo', 'Passe para', 'Precisão']
-    const palavrasChavePosse = ['Drible', 'Controle', 'Bola', 'Posse', 'Impedimento', 'Perda']
-    const palavrasChaveFisico = ['Duelo', 'Disputa', 'Disputa aérea', 'Desafio', 'Minutos']
+    const palavrasChaveAtaque = ['Gol', 'Golo', 'Assistência', 'Remate', 'Finalização', 'Xg', 'xA', 'Atacante', 'Penalti']
+    const palavrasChaveDefesa = ['Desarme', 'Interceptação', 'Interceção', 'Corte', 'Defesa', 'Defensivo', 'Cartão', 'Falta', 'Recuperação']
+    const palavrasChavePasses = ['Passe', 'Cruzamento', 'Longo', 'Curto', 'Médio', 'Chave', 'Progressivo', 'Terço final']
+    const palavrasChavePosse = ['Drible', 'Controle', 'Bola', 'Posse', 'Impedimento', 'Perda', 'Corrida', 'Aceleração']
+    const palavrasChaveFisico = ['Duelo', 'Disputa', 'Desafio', 'Minutos', 'Altura', 'Peso', 'Pé']
 
     colunas.forEach(metrica => {
       if (['?', 'Jogador', 'Time', 'Posição', 'Idade', 'Altura', 'Peso', 'Nacionalidade'].includes(metrica)) {

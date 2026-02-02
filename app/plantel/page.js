@@ -6,13 +6,13 @@ import { elencoReal } from './dados_elenco'
 
 export default function PlantelPage() {
   const router = useRouter()
-  const [sortConfig, setSortConfig] = useState({ key: 'Index', direction: 'desc' })
+  const [sortConfig, setSortConfig] = useState({ key: 'Gols', direction: 'desc' })
   
   // Métricas extraídas diretamente da nova planilha mestre
   const metricasPrincipais = [
-    'Index',
     'Partidas',
     'Gols',
+    'Assistências',
     'Acoes_Sucesso',
     'Passes_Precisos',
     'Dribles',
@@ -27,9 +27,9 @@ export default function PlantelPage() {
 
   const getLabel = (m) => {
     const labels = {
-      'Index': 'Index',
       'Partidas': 'PJ',
       'Gols': 'Gols',
+      'Assistências': 'Ast',
       'Acoes_Sucesso': 'Ações %',
       'Passes_Precisos': 'Passes %',
       'Dribles': 'Dribles',
