@@ -6,7 +6,7 @@ export const LOGOS = {
   'Guarani FC': '/club/escudoguarani.png',
   'Guarani': '/club/escudoguarani.png',
   
-  // Times do Paulistão e outras competições
+  // Times do Paulistão e outras competições (Nomes exatos das planilhas)
   'Santos': '/club/logos/santos.png',
   'Palmeiras': '/club/logos/palmeiras.png',
   'Grêmio Novorizontino': '/club/logos/grêmio-novorizontino.png',

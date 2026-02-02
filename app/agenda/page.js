@@ -6,11 +6,11 @@ import { getLogo, DEFAULT_LOGO } from '../logos'
 
 // Mapeamento de logos dos campeonatos
 const LOGOS_CAMPEONATOS = {
-  'PAULISTA SÉRIE A1': '/competitions/paulistao.png',
-  'PAULISTÃO': '/competitions/paulistao.png',
+  'PAULISTA': '/competitions/paulista/logo.png',
+  'PAULISTÃO': '/competitions/paulista/logo.png',
   'BRASILEIRÃO SÉRIE C': '/competitions/campeonato-brasileiro-série-c.png',
   'SÉRIE C': '/competitions/campeonato-brasileiro-série-c.png',
-  'COPA DO BRASIL': '/competitions/copa-do-brasil.png',
+  'COPA DO BRASIL': '/competitions/copa-do-brasil/logo.png',
 }
 
 const getLogoCampeonato = (campeonato) => {
