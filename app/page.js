@@ -1,4 +1,4 @@
-'''"use client" 
+"use client" 
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -74,7 +74,7 @@ export default function Home() {
             
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-[#062016] rounded-2xl flex items-center justify-center border border-emerald-900/50 group-hover:border-emerald-500/30 transition-colors">
-                <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z" /></svg>
               </div>
               <div>
                 <span className="block text-xl font-bold text-white">Calendário</span>
@@ -151,4 +151,3 @@ export default function Home() {
     </div>
   )
 }
-'''
