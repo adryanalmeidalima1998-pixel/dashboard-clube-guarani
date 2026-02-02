@@ -9,14 +9,14 @@ export default function Home() {
       {/* CABEÇALHO */}
       <header className="flex items-center gap-4 mb-8 pb-6 border-b border-slate-700">
         <Image 
-          src="/club/escudonovorizontino.png" 
-          alt="Grêmio Novorizontino" 
+          src="/club/escudoguarani.png" 
+          alt="Guarani FC" 
           width={70} 
           height={70}
-          className="rounded-full shadow-lg shadow-yellow-500/10"
+          className="rounded-full shadow-lg shadow-emerald-500/10"
         />
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Grêmio Novorizontino</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Guarani FC</h1>
           <p className="text-slate-400 text-sm font-medium">Dashboard de Gestão Técnica • Temporada 2026</p>
         </div>
       </header>
@@ -90,18 +90,18 @@ export default function Home() {
         </Link>
 
         {/* CARD ELENCO - REFORMULADO (SEM NOME DE JOGADOR) */}
-        <Link href="/plantel" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 group hover:border-yellow-500/50 transition-all flex flex-col justify-between overflow-hidden relative">
-          <div className="absolute -right-4 -top-4 w-24 h-24 bg-yellow-500/5 rounded-full blur-2xl group-hover:bg-yellow-500/10 transition-all"></div>
+        <Link href="/plantel" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 group hover:border-emerald-500/50 transition-all flex flex-col justify-between overflow-hidden relative">
+          <div className="absolute -right-4 -top-4 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-all"></div>
           
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
               <h2 className="text-slate-300 font-bold text-xs uppercase tracking-widest">Elenco Principal</h2>
             </div>
             
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-700 group-hover:border-yellow-500/30 transition-colors">
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-700 group-hover:border-emerald-500/30 transition-colors">
+                <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
               </div>
               <div>
                 <span className="block text-xl font-bold text-white">Plantel</span>
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-4 rounded-xl border border-slate-700 group-hover:bg-yellow-600 transition-all flex items-center justify-between">
+          <div className="bg-slate-900/80 p-4 rounded-xl border border-slate-700 group-hover:bg-emerald-600 transition-all flex items-center justify-between">
             <span className="text-sm font-bold">Ver Elenco Completo</span>
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
           </div>

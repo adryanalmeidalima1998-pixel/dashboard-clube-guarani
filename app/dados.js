@@ -2,7 +2,7 @@ export const jogadores = [
   {
     "?": 22,
     "Jogador": "Alexis Ivan Alvarino",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 24,
     "Altura": "184",
     "Peso": "81",
@@ -13,7 +13,7 @@ export const jogadores = [
   {
     "?": 77,
     "Jogador": "Mayk",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 26,
     "Altura": "172",
     "Peso": "67",
@@ -24,7 +24,7 @@ export const jogadores = [
   {
     "?": 21,
     "Jogador": "Raul Prata",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 37,
     "Altura": "175",
     "Peso": "72",
@@ -35,7 +35,7 @@ export const jogadores = [
   {
     "?": 16,
     "Jogador": "Reverson",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 27,
     "Altura": "180",
     "Peso": "75",
@@ -46,7 +46,7 @@ export const jogadores = [
   {
     "?": 2,
     "Jogador": "Rodrigo Soares",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 32,
     "Altura": "177",
     "Peso": "75",
@@ -57,7 +57,7 @@ export const jogadores = [
   {
     "?": 31,
     "Jogador": "Danilo Barcelos",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 33,
     "Altura": "186",
     "Peso": "79",
@@ -68,7 +68,7 @@ export const jogadores = [
   {
     "?": 4,
     "Jogador": "Patrick",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 26,
     "Altura": "188",
     "Peso": "82",
@@ -79,7 +79,7 @@ export const jogadores = [
   {
     "?": 3,
     "Jogador": "Rafael Donato",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 35,
     "Altura": "194",
     "Peso": "95",
@@ -90,7 +90,7 @@ export const jogadores = [
   {
     "?": 28,
     "Jogador": "César Martins",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 32,
     "Altura": "190",
     "Peso": "84",
@@ -101,7 +101,7 @@ export const jogadores = [
   {
     "?": 44,
     "Jogador": "Luisão",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 26,
     "Altura": "188",
     "Peso": "80",
@@ -112,7 +112,7 @@ export const jogadores = [
   {
     "?": 33,
     "Jogador": "Renato Palm",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 25,
     "Altura": "184",
     "Peso": "80",
@@ -123,7 +123,7 @@ export const jogadores = [
   {
     "?": 5,
     "Jogador": "Geovane",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 26,
     "Altura": "179",
     "Peso": "76",
@@ -134,7 +134,7 @@ export const jogadores = [
   {
     "?": 15,
     "Jogador": "Dudu",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 25,
     "Altura": "176",
     "Peso": "74",
@@ -145,7 +145,7 @@ export const jogadores = [
   {
     "?": 25,
     "Jogador": "Marlon",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 34,
     "Altura": "178",
     "Peso": "75",
@@ -156,7 +156,7 @@ export const jogadores = [
   {
     "?": 8,
     "Jogador": "Willian Farias",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 35,
     "Altura": "177",
     "Peso": "76",
@@ -167,7 +167,7 @@ export const jogadores = [
   {
     "?": 10,
     "Jogador": "Eduardo",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 29,
     "Altura": "182",
     "Peso": "78",
@@ -178,7 +178,7 @@ export const jogadores = [
   {
     "?": 7,
     "Jogador": "Rodolfo",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 32,
     "Altura": "175",
     "Peso": "70",
@@ -189,7 +189,7 @@ export const jogadores = [
   {
     "?": 11,
     "Jogador": "Lucca",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 21,
     "Altura": "180",
     "Peso": "75",
@@ -200,7 +200,7 @@ export const jogadores = [
   {
     "?": 9,
     "Jogador": "Neto Pessoa",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 30,
     "Altura": "183",
     "Peso": "80",
@@ -211,7 +211,7 @@ export const jogadores = [
   {
     "?": 19,
     "Jogador": "Léo Tocantins",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 26,
     "Altura": "178",
     "Peso": "74",
@@ -222,7 +222,7 @@ export const jogadores = [
   {
     "?": 99,
     "Jogador": "Waguininho",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 34,
     "Altura": "178",
     "Peso": "74",
@@ -233,7 +233,7 @@ export const jogadores = [
   {
     "?": 1,
     "Jogador": "Jordi",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 31,
     "Altura": "192",
     "Peso": "88",
@@ -244,7 +244,7 @@ export const jogadores = [
   {
     "?": 12,
     "Jogador": "Airton",
-    "Time": "Grêmio Novorizontino",
+    "Time": "Guarani FC",
     "Idade": 30,
     "Altura": "188",
     "Peso": "84",

@@ -83,7 +83,7 @@ export default function AgendaPage() {
             data[header.trim()] = row[i] || "";
           });
 
-          const isMandante = data['Mandante'] === 'Grêmio Novorizontino';
+          const isMandante = data['Mandante'] === 'Guarani FC';
           
           return {
             id: index,

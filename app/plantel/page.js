@@ -181,7 +181,7 @@ export default function PlantelPage() {
             </button>
             <div>
               <h1 className="text-3xl font-bold">Elenco Principal 2026</h1>
-              <p className="text-slate-400 text-sm">Grêmio Novorizontino • Gestão de Alta Performance</p>
+              <p className="text-slate-400 text-sm">Guarani FC • Gestão de Alta Performance</p>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-4 bg-slate-800/50 p-2 rounded-xl border border-slate-700">

@@ -2,13 +2,15 @@
 // Para adicionar um novo time, basta adicionar uma nova linha aqui
 
 export const LOGOS = {
-  // Novorizontino (sempre usar o escudo oficial)
-  'Grêmio Novorizontino': '/club/escudonovorizontino.png',
+  // Guarani (sempre usar o escudo oficial)
+  'Guarani FC': '/club/escudoguarani.png',
+  'Guarani': '/club/escudoguarani.png',
   
   // Times do Paulistão e outras competições
   'Santos': '/club/logos/santos.png',
   'Palmeiras': '/club/logos/palmeiras.png',
-  'Guarani': '/club/logos/guarani.png',
+  'Grêmio Novorizontino': '/club/logos/novorizontino.png',
+  'Novorizontino': '/club/logos/novorizontino.png',
   'Mirassol': '/club/logos/mirassol.png',
   'Botafogo-SP': '/club/logos/botafogo-sp.png',
   'Botafogo SP': '/club/logos/botafogo-sp.png', // Variação sem hífen
