@@ -57,7 +57,7 @@ export default function CentralDados() {
   useEffect(() => {
     const carregarDados = async () => {
       try {
-        const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSVC0eenchMDxK3wsOTXjq9kQiy3aHTFl0X1o5vwJZR7RiZzg1Irxxe_SL2IDrqb3c1i7ZL2ugpBJkN/pub?output=csv')
+        const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vR1fZO93XYZXGsJ7WlHXHh1Bk3Abor6JqamncSkwelJl6Tq-v9mzoRVVVIji-cqinONV5uqKebpRPwi/pub?output=csv')
         const csvText = await response.text()
         
         Papa.parse(csvText, {
@@ -269,7 +269,7 @@ export default function CentralDados() {
   const posicoes = [...new Set(jogadores.map(j => j.Posição))].filter(Boolean).sort()
 
   if (carregando) return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+    <div className="min-h-screen bg-[#062016] text-white flex items-center justify-center">
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto mb-4"></div>
         <span className="text-lg">Carregando dados da Central...</span>
@@ -278,7 +278,7 @@ export default function CentralDados() {
   )
 
   if (erro) return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+    <div className="min-h-screen bg-[#062016] text-white flex items-center justify-center">
       <div className="text-center">
         <span className="text-lg text-red-500">{erro}</span>
       </div>
@@ -293,7 +293,7 @@ export default function CentralDados() {
       {/* HEADER */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div className="flex items-center gap-4">
-          <button onClick={() => router.push('/')} className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
+          <button onClick={() => router.push('/')} className="p-2 bg-[#0a2d1f] hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
           </button>
           <h1 className="text-3xl font-bold">Central de Dados</h1>
@@ -303,7 +303,7 @@ export default function CentralDados() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
             Gráficos Avançados
           </button>
-          <button onClick={exportarCSV} className="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-bold border border-slate-700 flex items-center gap-2 transition-colors">
+          <button onClick={exportarCSV} className="bg-[#0a2d1f] hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-bold border border-emerald-900/50 flex items-center gap-2 transition-colors">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
             Exportar CSV
           </button>
@@ -316,7 +316,7 @@ export default function CentralDados() {
 
       {/* PAINEL DE TEMPLATES */}
       {mostrarTemplates && (
-        <div className="bg-slate-800 rounded-lg p-6 mb-6 border border-blue-700">
+        <div className="bg-[#0a2d1f] rounded-lg p-6 mb-6 border border-blue-700">
           <h3 className="text-lg font-bold mb-4">Meus Templates de Análise</h3>
           
           <div className="mb-6">
@@ -326,7 +326,7 @@ export default function CentralDados() {
                 placeholder="Nome do novo template (ex: Análise de Zagueiros)" 
                 value={nomeNovoTemplate}
                 onChange={(e) => setNomeNovoTemplate(e.target.value)}
-                className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
+                className="flex-1 bg-[#062016] border border-emerald-900/50 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
               />
               <button 
                 onClick={salvarTemplate}
@@ -341,7 +341,7 @@ export default function CentralDados() {
           {templates.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {templates.map(template => (
-                <div key={template.id} className="bg-slate-900 border border-slate-700 rounded-lg p-4 hover:border-blue-500 transition-colors">
+                <div key={template.id} className="bg-[#062016] border border-emerald-900/50 rounded-lg p-4 hover:border-blue-500 transition-colors">
                   <div className="flex justify-between items-start mb-2">
                     <div>
                       <h4 className="font-bold text-white">{template.nome}</h4>
@@ -376,12 +376,12 @@ export default function CentralDados() {
           placeholder="Buscar jogador..." 
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
-          className="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+          className="bg-[#0a2d1f] border border-emerald-900/50 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
         />
         <select 
           value={filtroTime}
           onChange={(e) => setFiltroTime(e.target.value)}
-          className="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
+          className="bg-[#0a2d1f] border border-emerald-900/50 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
         >
           <option value="todos">Todos os Times</option>
           {times.map(t => <option key={t} value={t}>{t}</option>)}
@@ -389,7 +389,7 @@ export default function CentralDados() {
         <select 
           value={filtroPosicao}
           onChange={(e) => setFiltroPosicao(e.target.value)}
-          className="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
+          className="bg-[#0a2d1f] border border-emerald-900/50 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
         >
           <option value="todas">Todas as Posições</option>
           {posicoes.map(p => <option key={p} value={p}>{p}</option>)}
@@ -410,7 +410,7 @@ export default function CentralDados() {
 
       {/* PAINEL DE MÉTRICAS COM ABAS */}
       {painelAberto && (
-        <div className="bg-slate-800 rounded-lg p-6 mb-6 border border-slate-700">
+        <div className="bg-[#0a2d1f] rounded-lg p-6 mb-6 border border-emerald-900/50">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-bold">Métricas por Categoria</h3>
             <div className="flex gap-2">
@@ -480,16 +480,16 @@ export default function CentralDados() {
       )}
 
       {/* TABELA */}
-      <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+      <div className="bg-[#0a2d1f] rounded-2xl border border-emerald-900/50 overflow-hidden shadow-2xl">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            <thead className="bg-slate-900/50 border-b border-slate-700 sticky top-0">
+            <thead className="bg-[#062016]/50 border-b border-emerald-900/50 sticky top-0">
               <tr>
-                <th className="p-4 text-left font-bold text-slate-400 uppercase text-[10px] cursor-pointer hover:text-white transition-colors sticky left-0 bg-slate-900 z-20" onClick={() => handleOrdenacao('Jogador')}>
+                <th className="p-4 text-left font-bold text-slate-400 uppercase text-[10px] cursor-pointer hover:text-white transition-colors sticky left-0 bg-[#062016] z-20" onClick={() => handleOrdenacao('Jogador')}>
                   Jogador {ordenacao.coluna === 'Jogador' && (ordenacao.direcao === 'asc' ? '↑' : '↓')}
                 </th>
-                <th className="p-4 text-left font-bold text-slate-400 uppercase text-[10px] sticky left-32 bg-slate-900 z-20">Time</th>
-                <th className="p-4 text-left font-bold text-slate-400 uppercase text-[10px] sticky left-48 bg-slate-900 z-20">Posição</th>
+                <th className="p-4 text-left font-bold text-slate-400 uppercase text-[10px] sticky left-32 bg-[#062016] z-20">Time</th>
+                <th className="p-4 text-left font-bold text-slate-400 uppercase text-[10px] sticky left-48 bg-[#062016] z-20">Posição</th>
                 {metricasSelecionadas.map(m => (
                   <th key={m} className="p-4 text-center font-bold text-slate-400 uppercase text-[10px] cursor-pointer hover:text-white transition-colors whitespace-nowrap" onClick={() => handleOrdenacao(m)}>
                     {m} {ordenacao.coluna === m && (ordenacao.direcao === 'asc' ? '↑' : '↓')}
@@ -500,9 +500,9 @@ export default function CentralDados() {
             <tbody className="divide-y divide-slate-700/50">
               {jogadoresFiltrados.slice(0, 150).map((j, i) => (
                 <tr key={i} className="hover:bg-slate-700/30 transition-colors group">
-                  <td className="p-4 font-bold text-white sticky left-0 bg-slate-800 group-hover:bg-slate-700/50 z-10">{j.Jogador}</td>
-                  <td className="p-4 text-slate-300 sticky left-32 bg-slate-800 group-hover:bg-slate-700/50 z-10">{j.Time}</td>
-                  <td className="p-4 sticky left-48 bg-slate-800 group-hover:bg-slate-700/50 z-10"><span className="bg-slate-900 px-2 py-1 rounded text-[10px] font-bold border border-slate-700 text-emerald-400">{j.Posição}</span></td>
+                  <td className="p-4 font-bold text-white sticky left-0 bg-[#0a2d1f] group-hover:bg-slate-700/50 z-10">{j.Jogador}</td>
+                  <td className="p-4 text-slate-300 sticky left-32 bg-[#0a2d1f] group-hover:bg-slate-700/50 z-10">{j.Time}</td>
+                  <td className="p-4 sticky left-48 bg-[#0a2d1f] group-hover:bg-slate-700/50 z-10"><span className="bg-[#062016] px-2 py-1 rounded text-[10px] font-bold border border-emerald-900/50 text-emerald-400">{j.Posição}</span></td>
                   {metricasSelecionadas.map(m => {
                     const val = parseValue(j[m])
                     const media = mediaLiga[m]

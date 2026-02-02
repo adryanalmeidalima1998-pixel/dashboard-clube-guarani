@@ -200,7 +200,7 @@ export default function BenchmarkPage() {
   }
 
   if (carregando) return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+    <div className="min-h-screen bg-[#062016] text-white flex items-center justify-center">
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto mb-4"></div>
         <span className="text-lg">Carregando dados de benchmark...</span>
@@ -209,7 +209,7 @@ export default function BenchmarkPage() {
   )
 
   if (erro) return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+    <div className="min-h-screen bg-[#062016] text-white flex items-center justify-center">
       <div className="text-center">
         <span className="text-lg text-red-500">{erro}</span>
       </div>
@@ -222,7 +222,7 @@ export default function BenchmarkPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-8">
-          <button onClick={() => router.push('/central-dados')} className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
+          <button onClick={() => router.push('/central-dados')} className="p-2 bg-[#0a2d1f] hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
           </button>
           <div>
@@ -238,7 +238,7 @@ export default function BenchmarkPage() {
             <select 
               value={ligaSelecionada}
               onChange={(e) => setLigaSelecionada(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
+              className="w-full bg-[#0a2d1f] border border-emerald-900/50 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
             >
               {ligas.map(l => <option key={l} value={l}>{l}</option>)}
             </select>
@@ -248,7 +248,7 @@ export default function BenchmarkPage() {
             <select 
               value={temporadaSelecionada}
               onChange={(e) => setTemporadaSelecionada(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
+              className="w-full bg-[#0a2d1f] border border-emerald-900/50 rounded-lg px-4 py-2 text-white focus:border-emerald-500 focus:outline-none"
             >
               {temporadas.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
@@ -258,7 +258,7 @@ export default function BenchmarkPage() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           {/* SELETOR DE JOGADOR */}
           <div className="lg:col-span-1">
-            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 sticky top-6">
+            <div className="bg-[#0a2d1f] rounded-2xl p-6 border border-emerald-900/50 sticky top-6">
               <h2 className="text-lg font-bold text-white mb-4">Selecionar Jogador</h2>
               <div className="space-y-2 max-h-96 overflow-y-auto">
                 {jogadores.map(j => (
@@ -268,7 +268,7 @@ export default function BenchmarkPage() {
                     className={`w-full text-left p-3 rounded-lg transition-colors border ${
                       jogadorSelecionado === j.Jogador
                         ? 'bg-emerald-600 border-emerald-500 text-white'
-                        : 'bg-slate-900 border-slate-700 hover:bg-slate-700 text-slate-300'
+                        : 'bg-[#062016] border-emerald-900/50 hover:bg-slate-700 text-slate-300'
                     }`}
                   >
                     <div className="font-bold text-sm">{j.Jogador}</div>
@@ -282,7 +282,7 @@ export default function BenchmarkPage() {
           {/* ANÁLISE DE BENCHMARK */}
           <div className="lg:col-span-3">
             {jogadorAtual && mediasLiga[jogadorAtual.Posição] && (
-              <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+              <div className="bg-[#0a2d1f] rounded-2xl p-6 border border-emerald-900/50">
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold text-white mb-2">{jogadorAtual.Jogador}</h2>
                   <div className="flex gap-4 text-sm flex-wrap">
@@ -330,7 +330,7 @@ export default function BenchmarkPage() {
                           <span className="text-sm font-bold text-white">{valorJogador.toFixed(2)}</span>
                           <span className="text-xs text-slate-400">vs {mediaLiga.toFixed(2)}</span>
                         </div>
-                        <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden">
+                        <div className="w-full bg-[#062016] rounded-full h-2 overflow-hidden">
                           <div 
                             className={`h-full ${obterCorBarra(variacao)} transition-all`}
                             style={{ width: `${Math.min(Math.abs(variacao), 100)}%` }}
@@ -352,7 +352,7 @@ export default function BenchmarkPage() {
         </div>
 
         {/* LEGENDA */}
-        <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+        <div className="bg-[#0a2d1f] rounded-2xl p-6 border border-emerald-900/50">
           <h3 className="text-lg font-bold text-white mb-4">Como Ler o Benchmark</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>

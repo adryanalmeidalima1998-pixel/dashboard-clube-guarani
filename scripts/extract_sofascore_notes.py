@@ -5,7 +5,7 @@ import csv
 from io import StringIO
 
 def get_match_ids():
-    url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRTx9m5RGrJDNka8hpPUh2k1iTTSSs6lDOyDqNoDFOjBJDG7xCsIcEhdEutK2lKGmc5LgCmcsFcGZBY/pub?output=csv"
+    url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfZDnuuVuLX87xTQyBEQM4E2Uqd2sH7r5HRqgUBKicRjoy7CXINhkMkPZpBam3a66vxkkN8TbVZb7f/pub?output=csv"
     response = requests.get(url)
     if response.status_code != 200:
         return []
@@ -60,7 +60,7 @@ def main():
     
     final_averages = {player: round(sum(r)/len(r), 1) for player, r in all_notes.items() if r}
     
-    output_path = '/home/ubuntu/rebuild_temp/app/plantel/notas_sofascore.js'
+    output_path = './app/plantel/notas_sofascore.js'
     with open(output_path, 'w') as f:
         f.write("export const notasSofascore = " + json.dumps(final_averages, indent=2, ensure_ascii=False) + ";")
     

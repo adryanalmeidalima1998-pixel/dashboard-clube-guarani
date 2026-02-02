@@ -9,18 +9,18 @@ export const LOGOS = {
   // Times do Paulistão e outras competições
   'Santos': '/club/logos/santos.png',
   'Palmeiras': '/club/logos/palmeiras.png',
-  'Grêmio Novorizontino': '/club/logos/novorizontino.png',
-  'Novorizontino': '/club/logos/novorizontino.png',
+  'Grêmio Novorizontino': '/club/logos/grêmio-novorizontino.png',
+  'Novorizontino': '/club/logos/grêmio-novorizontino.png',
+  'Ponte Preta': '/club/logos/ponte-preta.png',
+  'Velo Clube': '/club/logos/velo-clube.png',
+  'Portuguesa': '/club/logos/portuguesa.png',
   'Mirassol': '/club/logos/mirassol.png',
   'Botafogo-SP': '/club/logos/botafogo-sp.png',
-  'Botafogo SP': '/club/logos/botafogo-sp.png', // Variação sem hífen
+  'Botafogo SP': '/club/logos/botafogo-sp.png',
   'EC Primavera': '/club/logos/primavera.png',
-  'Primavera': '/club/logos/primavera.png', // Variação curta
+  'Primavera': '/club/logos/primavera.png',
   'São Bernardo': '/club/logos/são-bernardo.png',
   'São Bernardo FC': '/club/logos/são-bernardo.png',
-  
-  // Adicione mais times conforme necessário:
-  // 'Nome do Time': '/club/logos/nome-do-arquivo.png',
 }
 
 // Logo padrão quando o time não está no mapeamento

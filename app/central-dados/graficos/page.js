@@ -344,7 +344,7 @@ export default function GraficosPage() {
   }
 
   if (carregando) return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+    <div className="min-h-screen bg-[#062016] text-white flex items-center justify-center">
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto mb-4"></div>
         <span className="text-lg">Carregando gráficos...</span>
@@ -353,7 +353,7 @@ export default function GraficosPage() {
   )
 
   if (erro) return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+    <div className="min-h-screen bg-[#062016] text-white flex items-center justify-center">
       <div className="text-center">
         <span className="text-lg text-red-500">{erro}</span>
       </div>
@@ -364,7 +364,7 @@ export default function GraficosPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-8">
-          <button onClick={() => router.push('/central-dados')} className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
+          <button onClick={() => router.push('/central-dados')} className="p-2 bg-[#0a2d1f] hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
           </button>
           <div>
@@ -375,7 +375,7 @@ export default function GraficosPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* GRÁFICO DE RADAR */}
-          <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+          <div className="bg-[#0a2d1f] rounded-2xl p-6 border border-emerald-900/50">
             <h2 className="text-lg font-bold text-white mb-2">Perfil do Jogador (Radar 360°)</h2>
             <p className="text-xs text-slate-400 mb-4">Escala normalizada: 1.0 = Média do Elenco | Máximo: 2.0</p>
             
@@ -387,7 +387,7 @@ export default function GraficosPage() {
                   <select 
                     value={filtroTimeRadar} 
                     onChange={(e) => setFiltroTimeRadar(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
+                    className="w-full bg-[#062016] border border-emerald-900/50 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
                   >
                     {times.map(t => <option key={t} value={t}>{t}</option>)}
                   </select>
@@ -397,7 +397,7 @@ export default function GraficosPage() {
                   <select 
                     value={filtroPosicaoRadar} 
                     onChange={(e) => setFiltroPosicaoRadar(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
+                    className="w-full bg-[#062016] border border-emerald-900/50 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
                   >
                     {posicoes.map(p => <option key={p} value={p}>{p}</option>)}
                   </select>
@@ -409,9 +409,9 @@ export default function GraficosPage() {
                   <label className="block text-xs font-bold text-slate-300">Selecionar Jogadores (até 5)</label>
                   <button onClick={() => setJogadoresSelecionadosRadar([])} className="text-xs bg-slate-700 hover:bg-slate-600 px-2 py-1 rounded text-slate-300 hover:text-white transition-colors">Desmarcar Todos</button>
                 </div>
-                <div className="max-h-32 overflow-y-auto bg-slate-900 border border-slate-700 rounded-lg p-3 space-y-2">
+                <div className="max-h-32 overflow-y-auto bg-[#062016] border border-emerald-900/50 rounded-lg p-3 space-y-2">
                   {jogadoresFiltradosRadar.map(j => (
-                    <label key={j.Jogador} className="flex items-center gap-2 text-sm cursor-pointer hover:bg-slate-800 p-1 rounded">
+                    <label key={j.Jogador} className="flex items-center gap-2 text-sm cursor-pointer hover:bg-[#0a2d1f] p-1 rounded">
                       <input 
                         type="checkbox" 
                         checked={jogadoresSelecionadosRadar.includes(j.Jogador)}
@@ -435,9 +435,9 @@ export default function GraficosPage() {
                   <label className="block text-xs font-bold text-slate-300">Selecionar Métricas (até 5)</label>
                   <button onClick={() => setMetricasRadar([])} className="text-xs bg-slate-700 hover:bg-slate-600 px-2 py-1 rounded text-slate-300 hover:text-white transition-colors">Desmarcar Todos</button>
                 </div>
-                <div className="max-h-32 overflow-y-auto bg-slate-900 border border-slate-700 rounded-lg p-3 space-y-2">
+                <div className="max-h-32 overflow-y-auto bg-[#062016] border border-emerald-900/50 rounded-lg p-3 space-y-2">
                   {todasAsMetricas.map(m => (
-                    <label key={m} className="flex items-center gap-2 text-sm cursor-pointer hover:bg-slate-800 p-1 rounded">
+                    <label key={m} className="flex items-center gap-2 text-sm cursor-pointer hover:bg-[#0a2d1f] p-1 rounded">
                       <input 
                         type="checkbox" 
                         checked={metricasRadar.includes(m)}
@@ -457,13 +457,13 @@ export default function GraficosPage() {
               </div>
             </div>
 
-            <div className="bg-slate-900 rounded-xl p-4 border border-slate-700 min-h-96">
+            <div className="bg-[#062016] rounded-xl p-4 border border-emerald-900/50 min-h-96">
               {radarData && jogadoresSelecionadosRadar.length > 0 ? <Radar data={radarData} options={radarOptions} /> : <div className="text-slate-400 text-center py-20">Selecione jogadores e métricas</div>}
             </div>
           </div>
 
           {/* GRÁFICO DE DISPERSÃO */}
-          <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+          <div className="bg-[#0a2d1f] rounded-2xl p-6 border border-emerald-900/50">
             <h2 className="text-lg font-bold text-white mb-4">Comparativo de Elenco (Dispersão)</h2>
             
             {/* Filtros Dispersão */}
@@ -473,7 +473,7 @@ export default function GraficosPage() {
                 <select 
                   value={filtroPosicaoDispersa} 
                   onChange={(e) => setFiltroPosicaoDispersa(e.target.value)}
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
+                  className="w-full bg-[#062016] border border-emerald-900/50 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
                 >
                   {posicoes.map(p => <option key={p} value={p}>{p}</option>)}
                 </select>
@@ -485,7 +485,7 @@ export default function GraficosPage() {
                   <select 
                     value={metricaXDispersa} 
                     onChange={(e) => setMetricaXDispersa(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
+                    className="w-full bg-[#062016] border border-emerald-900/50 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
                   >
                     {todasAsMetricas.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
@@ -495,7 +495,7 @@ export default function GraficosPage() {
                   <select 
                     value={metricaYDispersa} 
                     onChange={(e) => setMetricaYDispersa(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
+                    className="w-full bg-[#062016] border border-emerald-900/50 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"
                   >
                     {todasAsMetricas.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
@@ -507,9 +507,9 @@ export default function GraficosPage() {
                   <label className="block text-xs font-bold text-slate-300">Selecionar Jogadores (deixe vazio para mostrar todos)</label>
                   <button onClick={() => setJogadoresSelecionadosDispersa([])} className="text-xs bg-slate-700 hover:bg-slate-600 px-2 py-1 rounded text-slate-300 hover:text-white transition-colors">Desmarcar Todos</button>
                 </div>
-                <div className="max-h-32 overflow-y-auto bg-slate-900 border border-slate-700 rounded-lg p-3 space-y-2">
+                <div className="max-h-32 overflow-y-auto bg-[#062016] border border-emerald-900/50 rounded-lg p-3 space-y-2">
                   {jogadoresFiltradosDispersa.map(j => (
-                    <label key={j.Jogador} className="flex items-center gap-2 text-sm cursor-pointer hover:bg-slate-800 p-1 rounded">
+                    <label key={j.Jogador} className="flex items-center gap-2 text-sm cursor-pointer hover:bg-[#0a2d1f] p-1 rounded">
                       <input 
                         type="checkbox" 
                         checked={jogadoresSelecionadosDispersa.includes(j.Jogador)}
@@ -529,7 +529,7 @@ export default function GraficosPage() {
               </div>
             </div>
 
-            <div className="bg-slate-900 rounded-xl p-4 border border-slate-700 min-h-96">
+            <div className="bg-[#062016] rounded-xl p-4 border border-emerald-900/50 min-h-96">
               {scatterData?.datasets?.length > 0 ? <Scatter data={scatterData} options={scatterOptions} /> : <div className="text-slate-400 text-center py-20">Nenhum dado disponível</div>}
             </div>
           </div>

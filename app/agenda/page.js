@@ -8,8 +8,8 @@ import { getLogo, DEFAULT_LOGO } from '../logos'
 const LOGOS_CAMPEONATOS = {
   'PAULISTA SÉRIE A1': '/competitions/paulistao.png',
   'PAULISTÃO': '/competitions/paulistao.png',
-  'BRASILEIRÃO SÉRIE B': '/competitions/brasileirao-b.png',
-  'SÉRIE B': '/competitions/brasileirao-b.png',
+  'BRASILEIRÃO SÉRIE C': '/competitions/campeonato-brasileiro-série-c.png',
+  'SÉRIE C': '/competitions/campeonato-brasileiro-série-c.png',
   'COPA DO BRASIL': '/competitions/copa-do-brasil.png',
 }
 
@@ -30,7 +30,7 @@ export default function AgendaPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRTx9m5RGrJDNka8hpPUh2k1iTTSSs6lDOyDqNoDFOjBJDG7xCsIcEhdEutK2lKGmc5LgCmcsFcGZBY/pub?output=csv"
+        const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfZDnuuVuLX87xTQyBEQM4E2Uqd2sH7r5HRqgUBKicRjoy7CXINhkMkPZpBam3a66vxkkN8TbVZb7f/pub?output=csv"
         const response = await fetch(url)
         const csvText = await response.text()
         
@@ -149,7 +149,7 @@ export default function AgendaPage() {
           <div className="flex items-center gap-4">
             <button 
               onClick={() => router.push('/')} 
-              className="p-2.5 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl transition-all duration-300 text-slate-400 hover:text-white hover:scale-105"
+              className="p-2.5 bg-[#0a2d1f]/50 hover:bg-slate-700/50 rounded-xl transition-all duration-300 text-slate-400 hover:text-white hover:scale-105"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -172,7 +172,7 @@ export default function AgendaPage() {
             <div 
               key={jogo.id}
               onClick={() => setJogoSelecionado(jogo)}
-              className="group relative bg-gradient-to-r from-slate-800/40 to-slate-800/20 rounded-2xl border border-slate-700/50 hover:border-emerald-500/40 transition-all duration-300 cursor-pointer overflow-hidden hover:shadow-lg hover:shadow-emerald-500/5"
+              className="group relative bg-gradient-to-r from-slate-800/40 to-slate-800/20 rounded-2xl border border-emerald-900/50/50 hover:border-emerald-500/40 transition-all duration-300 cursor-pointer overflow-hidden hover:shadow-lg hover:shadow-emerald-500/5"
             >
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/5 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -182,7 +182,7 @@ export default function AgendaPage() {
                   
                   {/* Data e Hora */}
                   <div className="flex-shrink-0 text-center min-w-[80px]">
-                    <div className="bg-slate-900/60 rounded-xl px-3 py-2 border border-slate-700/30">
+                    <div className="bg-[#062016]/60 rounded-xl px-3 py-2 border border-emerald-900/50/30">
                       <span className="block text-emerald-400 font-bold text-sm">{jogo.data}</span>
                       <span className="text-slate-500 text-xs">{jogo.hora || 'A definir'}</span>
                     </div>
@@ -208,7 +208,7 @@ export default function AgendaPage() {
                     {/* Placar / VS */}
                     <div className="flex-shrink-0">
                       {jogo.status === 'passado' ? (
-                        <div className="flex items-center gap-2 bg-slate-900/80 rounded-xl px-4 py-2 border border-slate-600/30">
+                        <div className="flex items-center gap-2 bg-[#062016]/80 rounded-xl px-4 py-2 border border-slate-600/30">
                           <span className="text-xl md:text-2xl font-black text-white">{jogo.golsMandanteNum}</span>
                           <span className="text-slate-500 text-sm">-</span>
                           <span className="text-xl md:text-2xl font-black text-white">{jogo.golsVisitanteNum}</span>
@@ -253,7 +253,7 @@ export default function AgendaPage() {
                     
                     {/* Logo do Campeonato */}
                     {jogo.logoCampeonato && (
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-white/5 p-1.5 border border-slate-700/30">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-white/5 p-1.5 border border-emerald-900/50/30">
                         <img 
                           src={jogo.logoCampeonato} 
                           alt={jogo.campeonato}
@@ -264,7 +264,7 @@ export default function AgendaPage() {
                     )}
 
                     {/* Seta */}
-                    <div className="p-2 bg-slate-900/50 rounded-lg group-hover:bg-emerald-500/20 transition-all duration-300">
+                    <div className="p-2 bg-[#062016]/50 rounded-lg group-hover:bg-emerald-500/20 transition-all duration-300">
                       <svg className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -291,11 +291,11 @@ export default function AgendaPage() {
           onClick={() => setJogoSelecionado(null)}
         >
           <div 
-            className="bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/50 rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-hidden shadow-2xl"
+            className="bg-gradient-to-b from-slate-800 to-slate-900 border border-emerald-900/50/50 rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header do Modal */}
-            <div className="relative p-6 border-b border-slate-700/50 bg-slate-800/50">
+            <div className="relative p-6 border-b border-emerald-900/50/50 bg-[#0a2d1f]/50">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   {jogoSelecionado.logoCampeonato && (
@@ -326,7 +326,7 @@ export default function AgendaPage() {
             {/* Conteúdo do Modal */}
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-100px)]">
               {/* Placar Principal */}
-              <div className="flex items-center justify-center gap-6 md:gap-10 mb-8 py-6 bg-slate-900/50 rounded-2xl border border-slate-700/30">
+              <div className="flex items-center justify-center gap-6 md:gap-10 mb-8 py-6 bg-[#062016]/50 rounded-2xl border border-emerald-900/50/30">
                 <div className="text-center flex flex-col items-center">
                   <img 
                     src={jogoSelecionado.logoMandante} 
@@ -374,7 +374,7 @@ export default function AgendaPage() {
                       <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
                       Gols {jogoSelecionado.mandante}
                     </h4>
-                    <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700/30 text-sm text-slate-300 min-h-[60px] whitespace-pre-line">
+                    <div className="bg-[#062016]/50 p-4 rounded-xl border border-emerald-900/50/30 text-sm text-slate-300 min-h-[60px] whitespace-pre-line">
                       {jogoSelecionado.golsMandante || "Sem gols"}
                     </div>
                   </div>
@@ -383,7 +383,7 @@ export default function AgendaPage() {
                       Gols {jogoSelecionado.visitante}
                       <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
                     </h4>
-                    <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700/30 text-sm text-slate-300 min-h-[60px] text-right whitespace-pre-line">
+                    <div className="bg-[#062016]/50 p-4 rounded-xl border border-emerald-900/50/30 text-sm text-slate-300 min-h-[60px] text-right whitespace-pre-line">
                       {jogoSelecionado.golsVisitante || "Sem gols"}
                     </div>
                   </div>
@@ -397,7 +397,7 @@ export default function AgendaPage() {
                   Escalação (SofaScore)
                 </h3>
                 {renderIframe(jogoSelecionado.escalaçaoIframe) || (
-                  <div className="bg-slate-900/50 p-12 rounded-xl border border-slate-700/30 text-center">
+                  <div className="bg-[#062016]/50 p-12 rounded-xl border border-emerald-900/50/30 text-center">
                     <svg className="w-12 h-12 text-slate-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>

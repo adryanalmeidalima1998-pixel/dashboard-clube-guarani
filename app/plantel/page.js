@@ -95,17 +95,17 @@ export default function PlantelPage() {
         <div className="flex items-center gap-3 mb-4 px-2">
           <div className="w-1 h-6 bg-emerald-500 rounded-full"></div>
           <h2 className="text-xl font-bold text-white uppercase tracking-wider">{titulo}</h2>
-          <span className="bg-slate-800 px-2 py-0.5 rounded text-[10px] text-slate-400 border border-slate-700">
+          <span className="bg-[#0a2d1f] px-2 py-0.5 rounded text-[10px] text-slate-400 border border-emerald-900/50">
             {jogadores.length} Atletas
           </span>
         </div>
         
-        <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+        <div className="bg-[#0a2d1f] rounded-2xl border border-emerald-900/50 overflow-hidden shadow-2xl">
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left border-collapse">
               <thead>
-                <tr className="bg-slate-900/50 border-b border-slate-700">
-                  <th onClick={() => requestSort('Jogador')} className="p-4 font-bold text-slate-500 uppercase text-[10px] tracking-wider sticky left-0 bg-slate-900 z-10 cursor-pointer hover:text-white transition-colors">
+                <tr className="bg-[#062016]/50 border-b border-emerald-900/50">
+                  <th onClick={() => requestSort('Jogador')} className="p-4 font-bold text-slate-500 uppercase text-[10px] tracking-wider sticky left-0 bg-[#062016] z-10 cursor-pointer hover:text-white transition-colors">
                     <div className="flex items-center gap-2"># Jogador {sortConfig.key === 'Jogador' && (sortConfig.direction === 'asc' ? '↑' : '↓')}</div>
                   </th>
                   <th className="p-4 font-bold text-slate-500 uppercase text-[10px] tracking-wider">Pos</th>
@@ -122,7 +122,7 @@ export default function PlantelPage() {
               <tbody className="divide-y divide-slate-700/50">
                 {jogadoresOrdenados.map((j, i) => (
                   <tr key={i} className="hover:bg-slate-700/30 transition-colors group">
-                    <td className="p-4 sticky left-0 bg-slate-800/90 backdrop-blur z-10 group-hover:bg-slate-700/50 transition-colors">
+                    <td className="p-4 sticky left-0 bg-[#0a2d1f]/90 backdrop-blur z-10 group-hover:bg-slate-700/50 transition-colors">
                       <div className="flex items-center gap-3">
                         <span className="text-slate-500 font-mono w-4">{j.Numero && j.Numero !== 'nan' ? j.Numero : '-'}</span>
                         <div>
@@ -132,7 +132,7 @@ export default function PlantelPage() {
                       </div>
                     </td>
                     <td className="p-4">
-                      <span className="bg-slate-900 px-2 py-1 rounded text-[10px] font-bold border border-slate-700 text-emerald-400">{j.Posicao || '-'}</span>
+                      <span className="bg-[#062016] px-2 py-1 rounded text-[10px] font-bold border border-emerald-900/50 text-emerald-400">{j.Posicao || '-'}</span>
                     </td>
                     {metricasPrincipais.map(m => {
                       const val = parseValue(j[m])
@@ -172,11 +172,11 @@ export default function PlantelPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white p-6">
+    <div className="min-h-screen bg-[#062016] text-white p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <button onClick={() => router.push('/')} className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
+            <button onClick={() => router.push('/')} className="p-2 bg-[#0a2d1f] hover:bg-slate-700 rounded-lg transition-colors text-slate-400 hover:text-white">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
             </button>
             <div>
@@ -184,7 +184,7 @@ export default function PlantelPage() {
               <p className="text-slate-400 text-sm">Guarani FC • Gestão de Alta Performance</p>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-4 bg-slate-800/50 p-2 rounded-xl border border-slate-700">
+          <div className="hidden md:flex items-center gap-4 bg-[#0a2d1f]/50 p-2 rounded-xl border border-emerald-900/50">
             <div className="text-right">
               <span className="block text-[10px] text-slate-500 uppercase font-bold">Total do Elenco</span>
               <span className="text-xl font-black text-emerald-400">{elencoReal.length} Atletas</span>
@@ -194,7 +194,7 @@ export default function PlantelPage() {
 
         {Object.entries(grupos).map(([titulo, jogadores]) => renderTabelaPosicao(titulo, jogadores))}
 
-        <div className="mt-6 flex flex-wrap items-center gap-6 bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+        <div className="mt-6 flex flex-wrap items-center gap-6 bg-[#0a2d1f]/50 p-4 rounded-xl border border-emerald-900/50/50">
           <div className="flex items-center gap-2"><div className="w-3 h-1 bg-emerald-500 rounded-full"></div><span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Acima da Média do Grupo</span></div>
           <div className="flex items-center gap-2"><div className="w-3 h-1 bg-red-500/50 rounded-full"></div><span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Abaixo da Média do Grupo</span></div>
           <div className="ml-auto text-[10px] text-slate-500 italic">* Dados extraídos integralmente da Planilha Mestre de Elenco 2026.</div>
