@@ -34,7 +34,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-3 flex-grow">
             <Link href="/competicoes/serie-c" className="flex flex-col items-center justify-center p-4 bg-[#062016]/50 hover:bg-slate-700/50 rounded-xl transition-all border border-emerald-500/30 group">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-500/20">
-                <Image src="/competitions/campeonato-brasileiro-série-c.png" alt="Série C" width={24} height={24} />
+                <Image src="/competitions/serie-b/logo.png" alt="Série C" width={24} height={24} />
               </div>
               <span className="text-[10px] font-bold uppercase text-emerald-400">Série C</span>
             </Link>

@@ -66,7 +66,7 @@ export default function CentralDados() {
           complete: (results) => {
             const dados = results.data.filter(j => j.Jogador && j.Jogador.trim()).map(j => ({
               ...j,
-              Time: j.Equipa || j.Time || ""
+              Time: j.TIME || j.Equipa || j.Time || ""
             }))
             setJogadores(dados)
             
